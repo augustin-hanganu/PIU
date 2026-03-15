@@ -1,0 +1,14 @@
+C:\Users\Avgustus\Downloads\ExempluClase\bin\Debug\net8.0\ExempluClase.exe
+C:\Users\Avgustus\Downloads\ExempluClase\bin\Debug\net8.0\ExempluClase.deps.json
+C:\Users\Avgustus\Downloads\ExempluClase\bin\Debug\net8.0\ExempluClase.runtimeconfig.json
+C:\Users\Avgustus\Downloads\ExempluClase\bin\Debug\net8.0\ExempluClase.dll
+C:\Users\Avgustus\Downloads\ExempluClase\bin\Debug\net8.0\ExempluClase.pdb
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ExempluClase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ExempluClase.AssemblyInfoInputs.cache
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ExempluClase.AssemblyInfo.cs
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ExempluClase.csproj.CoreCompileInputs.cache
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ExempluClase.dll
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\refint\ExempluClase.dll
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ExempluClase.pdb
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ExempluClase.genruntimeconfig.cache
+C:\Users\Avgustus\Downloads\ExempluClase\obj\Debug\net8.0\ref\ExempluClase.dll
