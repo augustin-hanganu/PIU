@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "EvidentaStudenti/1.0.0": {
+        "dependencies": {
+          "LibrarieModele": "1.0.0",
+          "NivelStocareData": "1.0.0"
+        },
+        "runtime": {
+          "EvidentaStudenti.dll": {}
+        }
+      },
+      "LibrarieModele/1.0.0": {
+        "runtime": {
+          "LibrarieModele.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "NivelStocareData/1.0.0": {
+        "dependencies": {
+          "LibrarieModele": "1.0.0"
+        },
+        "runtime": {
+          "NivelStocareData.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EvidentaStudenti/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibrarieModele/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NivelStocareData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\bin\Debug\net7.0\NivelStocareData.deps.json
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\bin\Debug\net7.0\NivelStocareData.dll
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\bin\Debug\net7.0\NivelStocareData.pdb
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\bin\Debug\net7.0\LibrarieModele.dll
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\bin\Debug\net7.0\LibrarieModele.pdb
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.csproj.AssemblyReference.cache
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.AssemblyInfoInputs.cache
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.AssemblyInfo.cs
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.csproj.CoreCompileInputs.cache
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.sourcelink.json
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelSto.CEB66E05.Up2Date
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.dll
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\refint\NivelStocareData.dll
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\NivelStocareData.pdb
+C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\NivelStocareData\obj\Debug\net7.0\ref\NivelStocareData.dll
