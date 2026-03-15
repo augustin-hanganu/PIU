@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "GameMarketPlace/1.0.0": {
+        "dependencies": {
+          "LibraryGameAndUsers": "1.0.0",
+          "NivelStoreData": "1.0.0"
+        },
+        "runtime": {
+          "GameMarketPlace.dll": {}
+        }
+      },
+      "LibraryGameAndUsers/1.0.0": {
+        "runtime": {
+          "LibraryGameAndUsers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "NivelStoreData/1.0.0": {
+        "dependencies": {
+          "LibraryGameAndUsers": "1.0.0"
+        },
+        "runtime": {
+          "NivelStoreData.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameMarketPlace/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibraryGameAndUsers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NivelStoreData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

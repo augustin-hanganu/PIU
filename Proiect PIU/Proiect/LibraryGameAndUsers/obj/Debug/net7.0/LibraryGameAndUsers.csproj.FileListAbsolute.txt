@@ -1,0 +1,11 @@
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\bin\Debug\net7.0\LibraryGameAndUsers.deps.json
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\bin\Debug\net7.0\LibraryGameAndUsers.dll
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\bin\Debug\net7.0\LibraryGameAndUsers.pdb
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.AssemblyInfoInputs.cache
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.AssemblyInfo.cs
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.csproj.CoreCompileInputs.cache
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.dll
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\refint\LibraryGameAndUsers.dll
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.pdb
+D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\ref\LibraryGameAndUsers.dll
