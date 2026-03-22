@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proiect PIU\\Proiect\\Proiect\\GameMarketPlace.csproj",
+      "projectUniqueName": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\GameMarketPlace.csproj",
       "projectName": "GameMarketPlace",
-      "projectPath": "D:\\Proiect PIU\\Proiect\\Proiect\\GameMarketPlace.csproj",
+      "projectPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\GameMarketPlace.csproj",
       "packagesPath": "C:\\Users\\Avgustus\\.nuget\\packages\\",
-      "outputPath": "D:\\Proiect PIU\\Proiect\\Proiect\\obj\\",
+      "outputPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Avgustus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,11 +72,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {
-              "projectPath": "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj"
+            "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {
+              "projectPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj"
             },
-            "D:\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj": {
-              "projectPath": "D:\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj"
+            "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj": {
+              "projectPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj"
             }
           }
         }

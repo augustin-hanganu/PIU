@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {}
+    "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {}
   },
   "projects": {
-    "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {
+    "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj",
+        "projectUniqueName": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj",
         "projectName": "LibraryGameAndUsers",
-        "projectPath": "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj",
+        "projectPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj",
         "packagesPath": "C:\\Users\\Avgustus\\.nuget\\packages\\",
-        "outputPath": "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\obj\\",
+        "outputPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Avgustus\\AppData\\Roaming\\NuGet\\NuGet.Config",

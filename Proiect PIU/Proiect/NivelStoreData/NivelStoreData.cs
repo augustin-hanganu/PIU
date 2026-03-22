@@ -4,153 +4,95 @@ namespace NivelStoreData
 {
     public class AdministrareMarketplace
     {
-        public List<Game> games = new List<Game>();
-        public List<User> users = new List<User>();
-
         public static Game CitireGameTastatura()
         {
             Console.Write("Titlu: ");
-            string titlu = Console.ReadLine();
+            string titlu = Console.ReadLine() ?? string.Empty;
 
-            Console.Write("Gen: ");
-            string gen = Console.ReadLine();
+            Console.WriteLine("Gen (0=RPG, 1=FPS, 2=Sport, 3=Strategie, 4=Aventura, 5=Simulare): ");
+            Enum.TryParse(Console.ReadLine(), out GenJoc gen);
 
             Console.Write("Descriere: ");
-            string descriere = Console.ReadLine();
+            string descriere = Console.ReadLine() ?? string.Empty;
 
             Console.Write("Pret (RON): ");
             double.TryParse(Console.ReadLine(), out double pret);
 
-            return new Game(0, titlu, gen, descriere, pret);
+            Console.WriteLine("Platforme disponibile (aduna valorile dorite):");
+            Console.WriteLine("  1 = PC");
+            Console.WriteLine("  2 = PlayStation");
+            Console.WriteLine("  4 = Xbox");
+            Console.WriteLine("  8 = Nintendo");
+            Console.WriteLine("  Ex: 3 = PC + PlayStation");
+            int.TryParse(Console.ReadLine(), out int valPlatforma);
+            PlatformaJoc platforme = (PlatformaJoc)valPlatforma;
+
+            return new Game(0, titlu, gen, descriere, pret, platforme);
         }
 
-        public void AdaugaGame(Game game)
+        public void AdaugaGame(Game game, List<Game> games)
         {
             game.IdGame = games.Count + 1;
             games.Add(game);
             Console.WriteLine("Joc adaugat cu succes!");
         }
 
-        public static void AfisareGame(Game game)
-        {
-            if (game == null)
-                Console.WriteLine("Jocul nu exista!");
-            else
-                Console.WriteLine(game.Info());
-        }
-
-        public void AfisareToateGameurile()
-        {
-            if (games.Count == 0)
-            {
-                Console.WriteLine("Nu exista jocuri in marketplace!");
-                return;
-            }
-            Console.WriteLine("=== Jocuri disponibile ===");
-            foreach (Game g in games)
-                AfisareGame(g);
-        }
-
-        public void CautareGameDupaTitlu()
-        {
-            Console.Write("Titlu cautat: ");
-            string titlu = Console.ReadLine();
-            bool gasit = false;
-
-            foreach (Game g in games)
-            {
-                if (g.Titlu.ToLower().Contains(titlu.ToLower()))
-                {
-                    AfisareGame(g);
-                    gasit = true;
-                }
-            }
-            if (!gasit)
-                Console.WriteLine("Niciun joc gasit!");
-        }
-
-        public void CautareGameDupaGen()
-        {
-            Console.Write("Gen cautat: ");
-            string gen = Console.ReadLine();
-            bool gasit = false;
-
-            foreach (Game g in games)
-            {
-                if (g.Gen.ToLower() == gen.ToLower())
-                {
-                    AfisareGame(g);
-                    gasit = true;
-                }
-            }
-            if (!gasit)
-                Console.WriteLine("Niciun joc gasit!");
-        }
-
         public static User CitireUserTastatura()
         {
             Console.Write("Nume utilizator: ");
-            string nume = Console.ReadLine();
+            string nume = Console.ReadLine() ?? string.Empty;
 
             Console.Write("Sold initial (RON): ");
             double.TryParse(Console.ReadLine(), out double sold);
 
-            return new User(0, nume, sold);
+            Console.WriteLine("Tip cont (0=Standard, 1=Premium, 2=Admin): ");
+            Enum.TryParse(Console.ReadLine(), out TipCont tipCont);
+
+            Console.WriteLine("Preferinte (aduna valorile dorite):");
+            Console.WriteLine("  1 = Notificari");
+            Console.WriteLine("  2 = Newsletter");
+            Console.WriteLine("  4 = Reduceri");
+            Console.WriteLine("  8 = AutoRenew");
+            Console.WriteLine("  Ex: 3 = Notificari + Newsletter");
+            int.TryParse(Console.ReadLine(), out int valPreferinte);
+            PreferinteUser preferinte = (PreferinteUser)valPreferinte;
+
+            return new User(0, nume, sold, tipCont, preferinte);
         }
 
-        public void AdaugaUser(User user)
+        public void AdaugaUser(User user, List<User> users)
         {
             user.IdUser = users.Count + 1;
             users.Add(user);
             Console.WriteLine("Utilizator inregistrat!");
         }
 
-        public void AfisareUtilizatori()
+        public void CumparaJoc(int idUser, int idGame, List<User> users, List<Game> games)
         {
-            if (users.Count == 0)
-            {
-                Console.WriteLine("Nu exista utilizatori!");
-                return;
-            }
-            foreach (User u in users)
-                Console.WriteLine(u.Info());
-        }
-
-        public void CumparaJoc(int idUser, int idGame)
-        {
-            User user = null;
-            Game game = null;
-
-            foreach (User u in users)
-                if (u.IdUser == idUser) user = u;
-
-            foreach (Game g in games)
-                if (g.IdGame == idGame) game = g;
+            // LINQ in loc de foreach pentru cautare - actualizat confrom cerintelor din Lab4
+            User user = users.FirstOrDefault(u => u.IdUser == idUser);
+            Game game = games.FirstOrDefault(g => g.IdGame == idGame);
 
             if (user == null) { Console.WriteLine("Utilizatorul nu exista!"); return; }
             if (game == null) { Console.WriteLine("Jocul nu exista!"); return; }
 
-            foreach (Game g in user.Biblioteca)
+            // LINQ pentru verificare biblioteca - acatualizat conform cerintelor din Lab4
+            bool detineJoc = user.Biblioteca.Any(g => g.IdGame == idGame);
+            if (detineJoc)
             {
-                if (g.IdGame == idGame)
-                {
-                    Console.WriteLine("Jocul este deja in biblioteca!");
-                    return;
-                }
+                Console.WriteLine("Jocul este deja in biblioteca!");
+                return;
             }
 
             if (user.Sold < game.Pret)
             {
-                Console.WriteLine($"Sold insuficient! Ai nevoie de {game.Pret} RON.");
+                Console.WriteLine($"Sold insuficient! Ai nevoie de {game.Pret:F2} RON.");
                 return;
             }
 
             user.Sold -= game.Pret;
             user.Biblioteca.Add(game);
-            Console.WriteLine($"Ai cumparat '{game.Titlu}' cu succes! Sold ramas: {user.Sold} RON");
+            Console.WriteLine($"Ai cumparat '{game.Titlu}' cu succes! Sold ramas: {user.Sold:F2} RON");
         }
-
-        public List<Game> GetGames() => games;
-        public List<User> GetUsers() => users;
     }
 }

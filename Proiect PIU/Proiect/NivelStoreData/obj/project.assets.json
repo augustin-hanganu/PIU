@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj",
+      "projectUniqueName": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj",
       "projectName": "NivelStoreData",
-      "projectPath": "D:\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj",
+      "projectPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj",
       "packagesPath": "C:\\Users\\Avgustus\\.nuget\\packages\\",
-      "outputPath": "D:\\Proiect PIU\\Proiect\\NivelStoreData\\obj\\",
+      "outputPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Avgustus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {
-              "projectPath": "D:\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj"
+            "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj": {
+              "projectPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\LibraryGameAndUsers.csproj"
             }
           }
         }
