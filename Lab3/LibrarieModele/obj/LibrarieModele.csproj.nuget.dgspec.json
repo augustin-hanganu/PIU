@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\LibrarieModele\\LibrarieModele.csproj": {}
+    "D:\\RepozitoriuGIT\\Lab3\\LibrarieModele\\LibrarieModele.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\LibrarieModele\\LibrarieModele.csproj": {
+    "D:\\RepozitoriuGIT\\Lab3\\LibrarieModele\\LibrarieModele.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\LibrarieModele\\LibrarieModele.csproj",
+        "projectUniqueName": "D:\\RepozitoriuGIT\\Lab3\\LibrarieModele\\LibrarieModele.csproj",
         "projectName": "LibrarieModele",
-        "projectPath": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\LibrarieModele\\LibrarieModele.csproj",
+        "projectPath": "D:\\RepozitoriuGIT\\Lab3\\LibrarieModele\\LibrarieModele.csproj",
         "packagesPath": "C:\\Users\\Avgustus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\LibrarieModele\\obj\\",
+        "outputPath": "D:\\RepozitoriuGIT\\Lab3\\LibrarieModele\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Avgustus\\AppData\\Roaming\\NuGet\\NuGet.Config",

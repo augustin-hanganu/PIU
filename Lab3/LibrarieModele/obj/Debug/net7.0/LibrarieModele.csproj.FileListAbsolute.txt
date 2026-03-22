@@ -10,3 +10,15 @@ C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\LibrarieModele\obj\Debug\ne
 C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\LibrarieModele\obj\Debug\net7.0\refint\LibrarieModele.dll
 C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\LibrarieModele\obj\Debug\net7.0\LibrarieModele.pdb
 C:\Users\Avgustus\Source\Repos\AplicatieDemoPIU_2026\LibrarieModele\obj\Debug\net7.0\ref\LibrarieModele.dll
+D:\RepozitoriuGIT\Lab3\LibrarieModele\bin\Debug\net7.0\LibrarieModele.deps.json
+D:\RepozitoriuGIT\Lab3\LibrarieModele\bin\Debug\net7.0\LibrarieModele.dll
+D:\RepozitoriuGIT\Lab3\LibrarieModele\bin\Debug\net7.0\LibrarieModele.pdb
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\LibrarieModele.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\LibrarieModele.AssemblyInfoInputs.cache
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\LibrarieModele.AssemblyInfo.cs
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\LibrarieModele.csproj.CoreCompileInputs.cache
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\LibrarieModele.sourcelink.json
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\LibrarieModele.dll
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\refint\LibrarieModele.dll
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\LibrarieModele.pdb
+D:\RepozitoriuGIT\Lab3\LibrarieModele\obj\Debug\net7.0\ref\LibrarieModele.dll

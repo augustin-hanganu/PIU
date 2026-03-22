@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\EvidentaStudenti\\EvidentaStudenti.csproj",
+      "projectUniqueName": "D:\\RepozitoriuGIT\\Lab3\\EvidentaStudenti\\EvidentaStudenti.csproj",
       "projectName": "EvidentaStudenti",
-      "projectPath": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\EvidentaStudenti\\EvidentaStudenti.csproj",
+      "projectPath": "D:\\RepozitoriuGIT\\Lab3\\EvidentaStudenti\\EvidentaStudenti.csproj",
       "packagesPath": "C:\\Users\\Avgustus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\EvidentaStudenti\\obj\\",
+      "outputPath": "D:\\RepozitoriuGIT\\Lab3\\EvidentaStudenti\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Avgustus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,11 +72,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\LibrarieModele\\LibrarieModele.csproj": {
-              "projectPath": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\LibrarieModele\\LibrarieModele.csproj"
+            "D:\\RepozitoriuGIT\\Lab3\\LibrarieModele\\LibrarieModele.csproj": {
+              "projectPath": "D:\\RepozitoriuGIT\\Lab3\\LibrarieModele\\LibrarieModele.csproj"
             },
-            "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\NivelStocareData\\NivelStocareData.csproj": {
-              "projectPath": "C:\\Users\\Avgustus\\Source\\Repos\\AplicatieDemoPIU_2026\\NivelStocareData\\NivelStocareData.csproj"
+            "D:\\RepozitoriuGIT\\Lab3\\NivelStocareData\\NivelStocareData.csproj": {
+              "projectPath": "D:\\RepozitoriuGIT\\Lab3\\NivelStocareData\\NivelStocareData.csproj"
             }
           }
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NivelStocareData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51306782630f1f7d8dfcba33f50856dbd7f8e311")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9f0b0dc34df8fe805e7d40573fcc70dc9e7ef4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("NivelStocareData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NivelStocareData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
