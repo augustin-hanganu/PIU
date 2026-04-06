@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zi0szsriX/o=",
+  "success": true,
+  "projectFilePath": "D:\\Lab 5\\EvidentaStudenti\\EvidentaStudenti.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Avgustus\\.nuget\\packages\\system.configuration.configurationmanager\\10.0.4\\system.configuration.configurationmanager.10.0.4.nupkg.sha512",
+    "C:\\Users\\Avgustus\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512",
+    "C:\\Users\\Avgustus\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.4\\system.security.cryptography.protecteddata.10.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

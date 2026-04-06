@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0-windows7.0": {
+      "LibrarieModele/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/LibrarieModele.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LibrarieModele.dll": {}
+        }
+      },
+      "NivelStocareDate/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "LibrarieModele": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NivelStocareDate.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NivelStocareDate.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LibrarieModele/1.0.0": {
+      "type": "project",
+      "path": "../LibrarieModele/LibrarieModele.csproj",
+      "msbuildProject": "../LibrarieModele/LibrarieModele.csproj"
+    },
+    "NivelStocareDate/1.0.0": {
+      "type": "project",
+      "path": "../NivelStocareDate/NivelStocareDate.csproj",
+      "msbuildProject": "../NivelStocareDate/NivelStocareDate.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0-windows7.0": [
+      "LibrarieModele >= 1.0.0",
+      "NivelStocareDate >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Avgustus\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Lab 5\\NivelUIWPF\\NivelUIWPF.csproj",
+      "projectName": "NivelUIWPF",
+      "projectPath": "D:\\Lab 5\\NivelUIWPF\\NivelUIWPF.csproj",
+      "packagesPath": "C:\\Users\\Avgustus\\.nuget\\packages\\",
+      "outputPath": "D:\\Lab 5\\NivelUIWPF\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Avgustus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "projectReferences": {
+            "D:\\Lab 5\\LibrarieModele\\LibrarieModele.csproj": {
+              "projectPath": "D:\\Lab 5\\LibrarieModele\\LibrarieModele.csproj"
+            },
+            "D:\\Lab 5\\NivelStocareDate\\NivelStocareDate.csproj": {
+              "projectPath": "D:\\Lab 5\\NivelStocareDate\\NivelStocareDate.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net7.0-windows7.0": {
+        "targetAlias": "net7.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

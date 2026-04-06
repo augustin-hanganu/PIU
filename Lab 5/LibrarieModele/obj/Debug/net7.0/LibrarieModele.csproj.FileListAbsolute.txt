@@ -1,0 +1,12 @@
+D:\Lab 5\LibrarieModele\bin\Debug\net7.0\LibrarieModele.deps.json
+D:\Lab 5\LibrarieModele\bin\Debug\net7.0\LibrarieModele.dll
+D:\Lab 5\LibrarieModele\bin\Debug\net7.0\LibrarieModele.pdb
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\LibrarieModele.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\LibrarieModele.AssemblyInfoInputs.cache
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\LibrarieModele.AssemblyInfo.cs
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\LibrarieModele.csproj.CoreCompileInputs.cache
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\LibrarieModele.sourcelink.json
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\LibrarieModele.dll
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\refint\LibrarieModele.dll
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\LibrarieModele.pdb
+D:\Lab 5\LibrarieModele\obj\Debug\net7.0\ref\LibrarieModele.dll
