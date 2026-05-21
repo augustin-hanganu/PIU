@@ -1,0 +1,38 @@
+﻿<Window x:Class="AplicatieWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Aplicatie WPF"
+        Height="450"
+        Width="800"
+        WindowState="Maximized"
+        WindowStyle="ToolWindow"
+        Background="LightBlue">
+
+    <Grid>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <Label Content="Primul Label"
+                   FontSize="22"
+                   FontStyle="Italic"
+                   Foreground="Red"
+                   Margin="10"/>
+
+            <Label Content="Al Doilea Label"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Foreground="Blue"
+                   Margin="10"/>
+
+            <Label Content="Al Treilea Label"
+                   FontSize="22"
+                   FontFamily="Arial"
+                   Foreground="Green"
+                   Margin="10"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
