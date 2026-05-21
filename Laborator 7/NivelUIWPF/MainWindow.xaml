@@ -1,0 +1,234 @@
+﻿<Window x:Class="NivelUIWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NivelUIWPF"
+        xmlns:enums="clr-namespace:LibrarieModele.Enums;assembly=LibrarieModele"
+        mc:Ignorable="d"
+        Title="Evidenta Studenti"
+        Height="700"
+        Width="950"
+        Background="LightBlue">
+
+    <Window.Resources>
+        <local:EnumToBooleanConverter x:Key="enumToBool"/>
+    </Window.Resources>
+
+    <Grid Margin="20">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- MENIU -->
+        <StackPanel Grid.Column="0"
+                    Margin="0,0,15,0">
+
+            <Button x:Name="btnMeniuAdauga"
+                    Content="Adauga + Afiseaza"
+                    Height="40"
+                    Margin="0,0,0,10"
+                    FontSize="14"
+                    Click="btnMeniuAdauga_Click"/>
+
+            <Button x:Name="btnMeniuCauta"
+                    Content="Cauta"
+                    Height="40"
+                    FontSize="14"
+                    Click="btnMeniuCauta_Click"/>
+
+        </StackPanel>
+
+        <!-- CONTINUT -->
+        <Grid Grid.Column="1">
+
+            <!-- PANEL ADAUGARE -->
+            <Grid x:Name="panelAdauga">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- NUME -->
+                <StackPanel Grid.Row="0" Margin="0,0,0,10">
+
+                    <Label Content="Nume"
+                           FontWeight="Bold"/>
+
+                    <TextBox x:Name="txtNume"
+                             Height="30"
+                             MaxLength="15"/>
+
+                    <TextBlock x:Name="tbErrNume"
+                               Foreground="Red"
+                               Visibility="Collapsed"/>
+
+                </StackPanel>
+
+                <!-- PRENUME -->
+                <StackPanel Grid.Row="1" Margin="0,0,0,10">
+
+                    <Label Content="Prenume"
+                           FontWeight="Bold"/>
+
+                    <TextBox x:Name="txtPrenume"
+                             Height="30"
+                             MaxLength="15"/>
+
+                    <TextBlock x:Name="tbErrPrenume"
+                               Foreground="Red"
+                               Visibility="Collapsed"/>
+
+                </StackPanel>
+
+                <!-- NOTE -->
+                <StackPanel Grid.Row="2" Margin="0,0,0,10">
+
+                    <Label Content="Note"
+                           FontWeight="Bold"/>
+
+                    <TextBox x:Name="txtNote"
+                             Height="30"/>
+
+                    <TextBlock x:Name="tbErrNote"
+                               Foreground="Red"
+                               Visibility="Collapsed"/>
+
+                </StackPanel>
+
+                <!-- PROGRAM -->
+                <StackPanel Grid.Row="3" Margin="0,0,0,10">
+
+                    <Label Content="Program Studiu"
+                           FontWeight="Bold"/>
+
+                    <WrapPanel>
+
+                        <RadioButton x:Name="rbCalculatoare"
+                                     Content="Calculatoare"
+                                     IsChecked="True"
+                                     Margin="0,0,20,0"/>
+
+                        <RadioButton x:Name="rbAutomatica"
+                                     Content="Automatica"
+                                     Margin="0,0,20,0"/>
+
+                        <RadioButton x:Name="rbElectronica"
+                                     Content="Electronica"/>
+
+                    </WrapPanel>
+
+                </StackPanel>
+
+                <!-- DISCIPLINE -->
+                <StackPanel Grid.Row="4" Margin="0,0,0,10">
+
+                    <Label Content="Discipline"
+                           FontWeight="Bold"/>
+
+                    <WrapPanel>
+
+                        <CheckBox x:Name="cbPIU"
+                                  Content="PIU"
+                                  Margin="0,0,20,0"/>
+
+                        <CheckBox x:Name="cbPCLP"
+                                  Content="PCLP"
+                                  Margin="0,0,20,0"/>
+
+                        <CheckBox x:Name="cbPOO"
+                                  Content="POO"/>
+
+                    </WrapPanel>
+
+                </StackPanel>
+
+                <!-- BUTOANE -->
+                <StackPanel Grid.Row="5"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,10">
+
+                    <Button x:Name="btnSalveaza"
+                            Content="Adauga"
+                            Width="120"
+                            Height="35"
+                            Margin="0,0,10,0"
+                            Click="btnSalveaza_Click"/>
+
+                    <Button x:Name="btnReseteaza"
+                            Content="Reset"
+                            Width="100"
+                            Height="35"
+                            Click="btnReseteaza_Click"/>
+
+                </StackPanel>
+
+                <!-- TABEL -->
+                <DataGrid x:Name="dgStudenti"
+                          Grid.Row="6"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="ID"
+                                            Binding="{Binding IdStudent}"
+                                            Width="60"/>
+
+                        <DataGridTextColumn Header="Nume"
+                                            Binding="{Binding Nume}"
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="Prenume"
+                                            Binding="{Binding Prenume}"
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="Note"
+                                            Binding="{Binding NoteAfisare}"
+                                            Width="*"/>
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+
+            <!-- PANEL CAUTARE -->
+            <Grid x:Name="panelCauta"
+                  Visibility="Collapsed">
+
+                <StackPanel>
+
+                    <Label Content="Nume student"/>
+
+                    <TextBox x:Name="txtCautareNume"
+                             Height="30"
+                             Margin="0,0,0,10"/>
+
+                    <Button x:Name="btnCauta"
+                            Content="Cauta"
+                            Width="120"
+                            Height="35"
+                            Click="btnCauta_Click"/>
+
+                    <DataGrid x:Name="dgStudentiGasiti"
+                              Margin="0,20,0,0"
+                              AutoGenerateColumns="True"/>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
