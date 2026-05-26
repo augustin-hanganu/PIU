@@ -1,0 +1,1059 @@
+﻿<Window x:Class="GameMarketplaceWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Game Marketplace"
+        Height="700" Width="1150"
+        MinWidth="800" MinHeight="550"
+        WindowStartupLocation="CenterScreen"
+        Background="#1a1a2e">
+
+    <Window.Resources>
+
+        <!-- Culori -->
+        <SolidColorBrush x:Key="AccentColor"    Color="#e94560"/>
+        <SolidColorBrush x:Key="TextPrimary"    Color="#eaeaea"/>
+        <SolidColorBrush x:Key="TextSecondary"  Color="#a8a8b3"/>
+        <SolidColorBrush x:Key="BgPanel"        Color="#16213e"/>
+        <SolidColorBrush x:Key="BgInput"        Color="#0f3460"/>
+
+        <!-- Constante validare (ca resurse vizuale nu exista in WPF,
+             sunt definite ca const in code-behind — stilurile de eroare sunt aici) -->
+
+        <!-- Style comun Label -->
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="FontSize"   Value="13"/>
+            <Setter Property="Padding"    Value="0"/>
+        </Style>
+
+        <!-- Style comun TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily"      Value="Segoe UI"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Background"      Value="{StaticResource BgInput}"/>
+            <Setter Property="Foreground"      Value="{StaticResource TextPrimary}"/>
+            <Setter Property="BorderBrush"     Value="#e94560"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding"         Value="8,6"/>
+            <Setter Property="CaretBrush"      Value="#eaeaea"/>
+        </Style>
+
+        <!-- Style comun CheckBox -->
+        <Style TargetType="CheckBox">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize"   Value="13"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="Margin"     Value="0,3"/>
+        </Style>
+
+        <!-- Style comun RadioButton -->
+        <Style TargetType="RadioButton">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize"   Value="13"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="Margin"     Value="0,3"/>
+        </Style>
+
+        <!-- Style TextBlock eroare -->
+        <Style x:Key="TextEroare" TargetType="TextBlock">
+            <Setter Property="FontFamily"  Value="Segoe UI"/>
+            <Setter Property="FontSize"    Value="11"/>
+            <Setter Property="Foreground"  Value="#e94560"/>
+            <Setter Property="Margin"      Value="0,2,0,8"/>
+            <Setter Property="Visibility"  Value="Collapsed"/>
+        </Style>
+
+        <!-- Style comun ComboBox -->
+        <Style TargetType="ComboBox">
+            <Setter Property="FontFamily"      Value="Segoe UI"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Foreground"      Value="#eaeaea"/>
+            <Setter Property="BorderBrush"     Value="#e94560"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding"         Value="8,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Border Background="#0f3460" BorderBrush="#e94560"
+                                    BorderThickness="1" CornerRadius="4">
+                                <Grid>
+                                    <ContentPresenter IsHitTestVisible="False"
+                                        Content="{TemplateBinding SelectionBoxItem}"
+                                        ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                        Margin="10,6,30,6" VerticalAlignment="Center"/>
+                                    <ToggleButton Focusable="False"
+                                        IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay,
+                                                    RelativeSource={RelativeSource TemplatedParent}}"
+                                        Background="Transparent" BorderThickness="0"
+                                        HorizontalAlignment="Right" Width="28">
+                                        <TextBlock Text="&#9660;" Foreground="#e94560" FontSize="12"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </ToggleButton>
+                                </Grid>
+                            </Border>
+                            <Popup Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   AllowsTransparency="True" Focusable="False" PopupAnimation="Slide">
+                                <Border Background="#000000" BorderBrush="#e94560" BorderThickness="1"
+                                        MinWidth="{TemplateBinding ActualWidth}" MaxHeight="200">
+                                    <ScrollViewer>
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Background" Value="#000000"/>
+                        <Setter Property="Foreground" Value="#eaeaea"/>
+                        <Setter Property="FontFamily" Value="Segoe UI"/>
+                        <Setter Property="FontSize"   Value="13"/>
+                        <Setter Property="Padding"    Value="10,7"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter Property="Background" Value="#e94560"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style Button principal -->
+        <Style x:Key="BtnPrincipal" TargetType="Button">
+            <Setter Property="FontFamily"      Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Background"      Value="#e94560"/>
+            <Setter Property="Foreground"      Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding"         Value="18,8"/>
+            <Setter Property="Cursor"          Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="6" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#c73652"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#a02840"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style Button secundar -->
+        <Style x:Key="BtnSecundar" TargetType="Button" BasedOn="{StaticResource BtnPrincipal}">
+            <Setter Property="Background" Value="#0f3460"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1a4a80"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Style meniu lateral - buton normal -->
+        <Style x:Key="MenuBtn" TargetType="Button">
+            <Setter Property="FontFamily"      Value="Segoe UI"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Background"      Value="Transparent"/>
+            <Setter Property="Foreground"      Value="#a8a8b3"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding"         Value="16,12"/>
+            <Setter Property="Cursor"          Value="Hand"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="#e94560"
+                                BorderThickness="4,0,0,0"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#0f1a2e"/>
+                                <Setter Property="Foreground" Value="#eaeaea"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style meniu lateral - buton activ -->
+        <Style x:Key="MenuBtnActiv" TargetType="Button">
+            <Setter Property="FontFamily"      Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Background"      Value="#0f1a2e"/>
+            <Setter Property="Foreground"      Value="#eaeaea"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding"         Value="16,12"/>
+            <Setter Property="Cursor"          Value="Hand"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="#e94560"
+                                BorderThickness="4,0,0,0"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style DataGrid -->
+        <Style TargetType="DataGrid">
+            <Setter Property="Background"            Value="#16213e"/>
+            <Setter Property="Foreground"            Value="#eaeaea"/>
+            <Setter Property="BorderBrush"           Value="#0f3460"/>
+            <Setter Property="BorderThickness"       Value="1"/>
+            <Setter Property="GridLinesVisibility"   Value="Horizontal"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#0f3460"/>
+            <Setter Property="RowBackground"         Value="#16213e"/>
+            <Setter Property="AlternatingRowBackground" Value="#1a2540"/>
+            <Setter Property="FontFamily"            Value="Segoe UI"/>
+            <Setter Property="FontSize"              Value="13"/>
+            <Setter Property="RowHeight"             Value="30"/>
+            <Setter Property="ColumnHeaderHeight"    Value="34"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background"   Value="#0f3460"/>
+            <Setter Property="Foreground"   Value="#eaeaea"/>
+            <Setter Property="FontFamily"   Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize"     Value="12"/>
+            <Setter Property="Padding"      Value="10,0"/>
+            <Setter Property="BorderBrush"  Value="#1a3a6e"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+        </Style>
+
+        <Style TargetType="DataGridRow">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1a3a6e"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#e94560"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding"         Value="8,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <Border Background="{TemplateBinding Background}"
+                                Padding="8,0">
+                            <ContentPresenter VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <!-- Layout principal: Header sus + continut cu meniu lateral -->
+    <DockPanel>
+
+        <!-- HEADER (ancorat sus) -->
+        <Border DockPanel.Dock="Top" Background="#16213e" Height="65">
+            <Grid Margin="20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Label Content="&#127918;" FontSize="26" Padding="0,0,8,0"/>
+                    <Label Content="GAME MARKETPLACE" FontSize="20" FontWeight="Bold"
+                           Foreground="{StaticResource AccentColor}"
+                           FontFamily="Segoe UI Black" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal"
+                            VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Label x:Name="lblTotalJocuri" Content="0 jocuri"
+                           Foreground="{StaticResource TextSecondary}" FontSize="12"/>
+                    <Label Content=" | " Foreground="#0f3460" FontSize="12"/>
+                    <Label x:Name="lblTotalUseri" Content="0 utilizatori"
+                           Foreground="{StaticResource TextSecondary}" FontSize="12"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- MENIU VERTICAL (ancorat stanga) -->
+        <Border DockPanel.Dock="Left" Width="180"
+                Background="#16213e"
+                BorderBrush="#0f3460" BorderThickness="0,0,1,0">
+            <StackPanel Margin="0,16,0,0">
+                <TextBlock Text="NAVIGARE"
+                           FontFamily="Segoe UI" FontSize="10"
+                           Foreground="#a8a8b3"
+                           Margin="20,0,0,10"/>
+
+                <Button x:Name="btnMenuJocuri"
+                        Content="Administreaza Jocuri"
+                        Style="{StaticResource MenuBtnActiv}"
+                        Click="BtnMenuJocuri_Click"/>
+
+                <Button x:Name="btnMenuUseri"
+                        Content="Administreaza Useri"
+                        Style="{StaticResource MenuBtn}"
+                        Click="BtnMenuUseri_Click"/>
+
+                <Button x:Name="btnMenuCauta"
+                        Content="Cauta"
+                        Style="{StaticResource MenuBtn}"
+                        Click="BtnMenuCauta_Click"/>
+
+                <Button x:Name="btnMenuModificaJoc"
+                        Content="Modifica Joc"
+                        Style="{StaticResource MenuBtn}"
+                        Click="BtnMenuModificaJoc_Click"/>
+
+                <Button x:Name="btnMenuModificaUser"
+                        Content="Modifica User"
+                        Style="{StaticResource MenuBtn}"
+                        Click="BtnMenuModificaUser_Click"/>
+
+                <Button x:Name="btnMenuCumpara"
+                        Content="Cumpara Joc"
+                        Style="{StaticResource MenuBtn}"
+                        Click="BtnMenuCumpara_Click"/>
+            </StackPanel>
+        </Border>
+
+        <!-- CONTINUT (ocupa restul spatiului) -->
+        <Grid>
+
+            <!-- PANEL JOCURI -->
+            <Grid x:Name="panelJocuri">
+                <Grid.ColumnDefinitions>
+                    <!-- Coloana form: latime fixa dar rezonabila -->
+                    <ColumnDefinition Width="300" MinWidth="240"/>
+                    <!-- Coloana lista: ocupa restul -->
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Stanga: formular adauga joc -->
+                <Border Grid.Column="0" Background="#16213e"
+                        BorderBrush="#0f3460" BorderThickness="0,0,2,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="20">
+
+                            <Label Content="ADAUGA JOC NOU" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource AccentColor}"
+                                   FontFamily="Segoe UI Black" Margin="0,0,0,16"/>
+
+                            <!-- Titlu -->
+                            <Label x:Name="lblCampTitlu" Content="Titlu" Margin="0,0,0,2"/>
+                            <TextBox x:Name="txtTitlu" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errTitlu"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Titlul este obligatoriu (max 50 caractere)!"/>
+
+                            <!-- Gen - RadioButton in loc de ComboBox (cerinta lab 8) -->
+                            <Label x:Name="lblCampGen" Content="Gen" Margin="0,4,0,4"/>
+                            <WrapPanel Margin="0,0,0,2">
+                                <RadioButton x:Name="rbRPG"       Content="RPG"
+                                             GroupName="GenJoc" IsChecked="True"
+                                             Margin="0,3,12,3"/>
+                                <RadioButton x:Name="rbFPS"       Content="FPS"
+                                             GroupName="GenJoc" Margin="0,3,12,3"/>
+                                <RadioButton x:Name="rbSport"     Content="Sport"
+                                             GroupName="GenJoc" Margin="0,3,12,3"/>
+                                <RadioButton x:Name="rbStrategie" Content="Strategie"
+                                             GroupName="GenJoc" Margin="0,3,12,3"/>
+                                <RadioButton x:Name="rbAventura"  Content="Aventura"
+                                             GroupName="GenJoc" Margin="0,3,12,3"/>
+                                <RadioButton x:Name="rbSimulare"  Content="Simulare"
+                                             GroupName="GenJoc" Margin="0,3,12,3"/>
+                            </WrapPanel>
+
+                            <!-- Descriere -->
+                            <Label x:Name="lblCampDescriere" Content="Descriere" Margin="0,4,0,2"/>
+                            <TextBox x:Name="txtDescriere" Height="64"
+                                     TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errDescriere"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Descrierea este obligatorie (max 200 caractere)!"/>
+
+                            <!-- Pret -->
+                            <Label x:Name="lblCampPret" Content="Pret (RON)" Margin="0,4,0,2"/>
+                            <TextBox x:Name="txtPret" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errPret"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Pretul trebuie sa fie un numar intre 0 si 10000!"/>
+
+                            <!-- Platforme - ListBox cu selectie multipla (cerinta lab 9) -->
+                            <Label x:Name="lblCampPlatforme"
+                                   Content="Platforme disponibile" Margin="0,4,0,4"/>
+                            <ListBox x:Name="lstPlatformeAdauga"
+                                     SelectionMode="Multiple"
+                                     Height="90"
+                                     Margin="0,0,0,2"
+                                     Background="#0f3460"
+                                     Foreground="#eaeaea"
+                                     BorderBrush="#e94560"
+                                     BorderThickness="1"
+                                     FontFamily="Segoe UI" FontSize="13">
+                                <ListBoxItem Content="PC"/>
+                                <ListBoxItem Content="PlayStation"/>
+                                <ListBoxItem Content="Xbox"/>
+                                <ListBoxItem Content="Nintendo"/>
+                            </ListBox>
+                            <TextBlock x:Name="errPlatforme"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Selectati cel putin o platforma!"/>
+
+                            <!-- Butoane -->
+                            <Grid Margin="0,8,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="8"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Content="+ Adauga Joc"
+                                        Style="{StaticResource BtnPrincipal}"
+                                        Click="BtnAdauga_Click"/>
+                                <Button Grid.Column="2" Content="Reset"
+                                        Style="{StaticResource BtnSecundar}"
+                                        Padding="12,8"
+                                        Click="BtnResetFormJoc_Click"/>
+                            </Grid>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <!-- Dreapta: lista jocuri -->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="#16213e" Padding="20,0">
+                        <Label Content="JOCURI DISPONIBILE" FontSize="13" FontWeight="Bold"
+                               Foreground="{StaticResource TextSecondary}"
+                               FontFamily="Segoe UI Black" VerticalAlignment="Center"/>
+                    </Border>
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="16">
+                        <ItemsControl x:Name="lstJocuri">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#16213e" BorderBrush="#0f3460"
+                                            BorderThickness="1" CornerRadius="10"
+                                            Margin="0,0,0,12" Padding="18,14">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="{Binding Titlu}"
+                                                           FontFamily="Segoe UI Semibold" FontSize="15"
+                                                           Foreground="#eaeaea" Margin="0,0,0,6"/>
+                                                <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                                                    <Border Background="#e94560" CornerRadius="4"
+                                                            Padding="8,2" Margin="0,0,8,0">
+                                                        <TextBlock Text="{Binding Gen}"
+                                                                   FontFamily="Segoe UI" FontSize="11"
+                                                                   Foreground="White"/>
+                                                    </Border>
+                                                    <Border Background="#0f3460" CornerRadius="4" Padding="8,2">
+                                                        <TextBlock Text="{Binding Platforme}"
+                                                                   FontFamily="Segoe UI" FontSize="11"
+                                                                   Foreground="#4ecca3"/>
+                                                    </Border>
+                                                </StackPanel>
+                                                <TextBlock Text="{Binding Descriere}"
+                                                           FontFamily="Segoe UI" FontSize="12"
+                                                           Foreground="#a8a8b3"
+                                                           TextWrapping="Wrap" MaxWidth="480"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" VerticalAlignment="Center"
+                                                        HorizontalAlignment="Right" Margin="16,0,0,0">
+                                                <TextBlock Text="{Binding Pret, StringFormat={}{0:F2} RON}"
+                                                           FontFamily="Segoe UI Black" FontSize="18"
+                                                           Foreground="#4ecca3" HorizontalAlignment="Right"/>
+                                                <TextBlock Text="{Binding IdGame, StringFormat=ID: {0}}"
+                                                           FontFamily="Segoe UI" FontSize="11"
+                                                           Foreground="#a8a8b3" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+
+            <!-- PANEL UTILIZATORI -->
+            <Grid x:Name="panelUseri" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300" MinWidth="240"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Stanga: formular utilizator -->
+                <Border Grid.Column="0" Background="#16213e"
+                        BorderBrush="#0f3460" BorderThickness="0,0,2,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="20">
+
+                            <Label Content="INREGISTRARE UTILIZATOR" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource AccentColor}"
+                                   FontFamily="Segoe UI Black" Margin="0,0,0,16"/>
+
+                            <!-- Nume -->
+                            <Label x:Name="lblCampNume" Content="Nume utilizator" Margin="0,0,0,2"/>
+                            <TextBox x:Name="txtNumeUser" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errNume"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Numele este obligatoriu (max 30 caractere)!"/>
+
+                            <!-- Sold -->
+                            <Label x:Name="lblCampSold" Content="Sold initial (RON)" Margin="0,4,0,2"/>
+                            <TextBox x:Name="txtSold" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errSold"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Soldul trebuie sa fie intre 0 si 100000 RON!"/>
+
+                            <!-- Tip cont - RadioButton (cerinta lab 8) -->
+                            <Label Content="Tip cont" Margin="0,4,0,4"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                <RadioButton x:Name="rbStandard" Content="Standard"
+                                             GroupName="TipCont" IsChecked="True"
+                                             Margin="0,0,14,0"/>
+                                <RadioButton x:Name="rbPremium" Content="Premium"
+                                             GroupName="TipCont" Margin="0,0,14,0"/>
+                                <RadioButton x:Name="rbAdmin"   Content="Admin"
+                                             GroupName="TipCont"/>
+                            </StackPanel>
+
+                            <!-- Data inregistrarii - DatePicker (cerinta lab 9) -->
+                            <Label Content="Data inregistrarii" Margin="0,0,0,4"/>
+                            <DatePicker x:Name="dtpDataInregistrare"
+                                        SelectedDateFormat="Short"
+                                        Margin="0,0,0,12"
+                                        Background="#0f3460"
+                                        Foreground="#eaeaea"
+                                        BorderBrush="#e94560"
+                                        FontFamily="Segoe UI" FontSize="13"/>
+
+                            <!-- Preferinte - CheckBox (cerinta lab 8) -->
+                            <Label Content="Preferinte" Margin="0,4,0,4"/>
+                            <StackPanel Margin="0,0,0,12">
+                                <CheckBox x:Name="chkNotificari" Content="Notificari"/>
+                                <CheckBox x:Name="chkNewsletter" Content="Newsletter"/>
+                                <CheckBox x:Name="chkReduceri"   Content="Reduceri"/>
+                                <CheckBox x:Name="chkAutoRenew"  Content="AutoRenew"/>
+                            </StackPanel>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="8"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Content="+ Inregistreaza"
+                                        Style="{StaticResource BtnPrincipal}"
+                                        Click="BtnAdaugaUser_Click"/>
+                                <Button Grid.Column="2" Content="Reset"
+                                        Style="{StaticResource BtnSecundar}"
+                                        Padding="12,8"
+                                        Click="BtnResetFormUser_Click"/>
+                            </Grid>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="#16213e" Padding="20,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="UTILIZATORI INREGISTRATI" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource TextSecondary}"
+                                   FontFamily="Segoe UI Black" VerticalAlignment="Center"/>
+                           
+                            <Label Grid.Column="1"
+                                   Content="{Binding ElementName=lstUseri, Path=Items.Count,
+                                             StringFormat='Total: {0}'}"
+                                   Foreground="{StaticResource AccentColor}"
+                                   FontSize="12" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="16">
+                        <ItemsControl x:Name="lstUseri">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#16213e" BorderBrush="#0f3460"
+                                            BorderThickness="1" CornerRadius="10"
+                                            Margin="0,0,0,12" Padding="18,14">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="{Binding Nume}"
+                                                           FontFamily="Segoe UI Semibold" FontSize="15"
+                                                           Foreground="#eaeaea" Margin="0,0,0,6"/>
+                                                <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                                                    <Border Background="#e94560" CornerRadius="4"
+                                                            Padding="8,2" Margin="0,0,8,0">
+                                                        <TextBlock Text="{Binding TipCont}"
+                                                                   FontFamily="Segoe UI" FontSize="11"
+                                                                   Foreground="White"/>
+                                                    </Border>
+                                                    <Border Background="#0f3460" CornerRadius="4" Padding="8,2">
+                                                        <TextBlock Text="{Binding Preferinte}"
+                                                                   FontFamily="Segoe UI" FontSize="11"
+                                                                   Foreground="#4ecca3"/>
+                                                    </Border>
+                                                </StackPanel>
+                                                <TextBlock FontFamily="Segoe UI" FontSize="12"
+                                                           Foreground="#a8a8b3">
+                                                    <Run Text="Jocuri in biblioteca: "/>
+                                                    <Run Text="{Binding Biblioteca.Count, Mode=OneWay}"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" VerticalAlignment="Center"
+                                                        HorizontalAlignment="Right" Margin="16,0,0,0">
+                                                <TextBlock Text="{Binding Sold, StringFormat={}{0:F2} RON}"
+                                                           FontFamily="Segoe UI Black" FontSize="18"
+                                                           Foreground="#4ecca3" HorizontalAlignment="Right"/>
+                                                <TextBlock Text="{Binding IdUser, StringFormat=ID: {0}}"
+                                                           FontFamily="Segoe UI" FontSize="11"
+                                                           Foreground="#a8a8b3" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+
+            <!-- PANEL CAUTA (cerinta lab 8: cautare dupa camp specific + DataGrid) -->
+            <Grid x:Name="panelCauta" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Zona filtre -->
+                <Border Grid.Row="0" Background="#16213e"
+                        BorderBrush="#0f3460" BorderThickness="0,0,0,1"
+                        Padding="24,16">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="16"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="16"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="16"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="CAUTA" FontSize="13" FontWeight="Bold"
+                               Foreground="{StaticResource AccentColor}"
+                               FontFamily="Segoe UI Black" VerticalAlignment="Center"/>
+
+                        <Label Grid.Column="2" Content="Titlu joc:" Margin="0,0,0,4"
+                               VerticalAlignment="Bottom"/>
+
+                        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                            <Label Content="Titlu joc:" Margin="0,0,0,2" FontSize="11"
+                                   Foreground="{StaticResource TextSecondary}"/>
+                            <TextBox x:Name="txtCautaTitlu"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="4" VerticalAlignment="Center">
+                            <Label Content="Nume utilizator:" Margin="0,0,0,2" FontSize="11"
+                                   Foreground="{StaticResource TextSecondary}"/>
+                            <TextBox x:Name="txtCautaNume" Width="200"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="6" VerticalAlignment="Center">
+                            <Label Content="Gen joc:" Margin="0,0,0,2" FontSize="11"
+                                   Foreground="{StaticResource TextSecondary}"/>
+                            <ComboBox x:Name="cmbCautaGen" Width="200">
+                                <ComboBoxItem Content="Toate" IsSelected="True"/>
+                                <ComboBoxItem Content="RPG"/>
+                                <ComboBoxItem Content="FPS"/>
+                                <ComboBoxItem Content="Sport"/>
+                                <ComboBoxItem Content="Strategie"/>
+                                <ComboBoxItem Content="Aventura"/>
+                                <ComboBoxItem Content="Simulare"/>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="8" Orientation="Horizontal"
+                                    VerticalAlignment="Bottom">
+                            <Button Content="Cauta" Style="{StaticResource BtnPrincipal}"
+                                    Padding="16,7" Margin="0,0,8,0"
+                                    Click="BtnCauta_Click"/>
+                            <Button Content="Reset" Style="{StaticResource BtnSecundar}"
+                                    Padding="12,7"
+                                    Click="BtnResetCauta_Click"/>
+                        </StackPanel>
+
+                    </Grid>
+                </Border>
+
+                <!-- Zona rezultate cu DataGrid -->
+                <Grid Grid.Row="1" Margin="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="16"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- DataGrid Jocuri -->
+                    <Label Grid.Row="0" Content="Jocuri gasite"
+                           FontFamily="Segoe UI Black" FontSize="11"
+                           Foreground="{StaticResource TextSecondary}" Margin="0,0,0,6"/>
+
+                    <DataGrid Grid.Row="1"
+                              x:Name="dgJocuri"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              HeadersVisibility="Column"
+                              SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID"      Binding="{Binding IdGame}"  Width="50"/>
+                            <DataGridTextColumn Header="Titlu"   Binding="{Binding Titlu}"   Width="*"/>
+                            <DataGridTextColumn Header="Gen"     Binding="{Binding Gen}"     Width="90"/>
+                            <DataGridTextColumn Header="Pret"    Binding="{Binding Pret, StringFormat={}{0:F2} RON}" Width="100"/>
+                            <DataGridTextColumn Header="Platforme" Binding="{Binding Platforme}" Width="160"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock Grid.Row="1" x:Name="lblNiciunJoc"
+                               Text="Niciun joc gasit."
+                               FontFamily="Segoe UI" FontSize="13"
+                               Foreground="{StaticResource TextSecondary}"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Visibility="Collapsed"/>
+
+                    <!-- DataGrid Utilizatori -->
+                    <Label Grid.Row="3" Content="Utilizatori gasiti"
+                           FontFamily="Segoe UI Black" FontSize="11"
+                           Foreground="{StaticResource TextSecondary}" Margin="0,0,0,6"/>
+
+                    <DataGrid Grid.Row="4"
+                              x:Name="dgUseri"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              HeadersVisibility="Column"
+                              SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID"         Binding="{Binding IdUser}"  Width="50"/>
+                            <DataGridTextColumn Header="Nume"       Binding="{Binding Nume}"    Width="*"/>
+                            <DataGridTextColumn Header="Tip cont"   Binding="{Binding TipCont}" Width="100"/>
+                            <DataGridTextColumn Header="Sold (RON)" Binding="{Binding Sold, StringFormat={}{0:F2}}" Width="110"/>
+                            <DataGridTextColumn Header="Jocuri"     Binding="{Binding Biblioteca.Count, Mode=OneWay}" Width="70"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <TextBlock Grid.Row="4" x:Name="lblNiciunUser"
+                               Text="Niciun utilizator gasit."
+                               FontFamily="Segoe UI" FontSize="13"
+                               Foreground="{StaticResource TextSecondary}"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Visibility="Collapsed"/>
+                </Grid>
+            </Grid>
+
+            <!-- PANEL CUMPARA -->
+            <Grid x:Name="panelCumpara" Visibility="Collapsed">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="380">
+                    <Label Content="CUMPARA JOC" FontSize="18" FontWeight="Bold"
+                           Foreground="{StaticResource AccentColor}"
+                           FontFamily="Segoe UI Black"
+                           HorizontalAlignment="Center" Margin="0,0,0,28"/>
+
+                    <Label Content="ID Utilizator" Margin="0,0,0,4"/>
+                    <TextBox x:Name="txtIdUser" Margin="0,0,0,14"/>
+
+                    <Label Content="ID Joc" Margin="0,0,0,4"/>
+                    <TextBox x:Name="txtIdGame" Margin="0,0,0,22"/>
+
+                    <Button Content="Confirma Cumpararea"
+                            Style="{StaticResource BtnPrincipal}"
+                            Click="BtnCumpara_Click"
+                            HorizontalAlignment="Stretch"/>
+
+                    <Label x:Name="lblRezultatCumparare" Content=""
+                           HorizontalAlignment="Center" Margin="0,14,0,0"
+                           FontSize="13" Foreground="#4ecca3"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- PANEL MODIFICA JOC (cerinta lab 9) -->
+            <!-- ComboBox cu DisplayMemberPath="Titlu" pentru selectarea jocului -->
+            <Grid x:Name="panelModificaJoc" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="340" MinWidth="280"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Background="#16213e"
+                        BorderBrush="#0f3460" BorderThickness="0,0,2,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="20">
+
+                            <Label Content="MODIFICA JOC" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource AccentColor}"
+                                   FontFamily="Segoe UI Black" Margin="0,0,0,16"/>
+
+                            <!-- ComboBox cu DisplayMemberPath (cerinta lab 9) -->
+                            <Label Content="Selecteaza jocul de modificat" Margin="0,0,0,4"/>
+                            <ComboBox x:Name="cmbSelecteazaJoc"
+                                      DisplayMemberPath="Titlu"
+                                      Margin="0,0,0,16"
+                                      SelectionChanged="CmbSelecteazaJoc_SelectionChanged"/>
+
+                            <Label x:Name="lblModTitlu" Content="Titlu nou" Margin="0,0,0,4"/>
+                            <TextBox x:Name="txtModTitlu" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errModTitlu"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Titlul este obligatoriu (max 50 caractere)!"/>
+
+                            <Label x:Name="lblModPret" Content="Pret nou (RON)" Margin="0,4,0,4"/>
+                            <TextBox x:Name="txtModPret" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errModPret"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Pretul trebuie sa fie un numar intre 0 si 10000!"/>
+
+                            <Label x:Name="lblModDescriere" Content="Descriere noua" Margin="0,4,0,4"/>
+                            <TextBox x:Name="txtModDescriere" Height="64"
+                                     TextWrapping="Wrap" AcceptsReturn="True"
+                                     Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errModDescriere"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Descrierea este obligatorie (max 200 caractere)!"/>
+
+                            <!-- ListBox platforme pentru modificare -->
+                            <Label Content="Platforme" Margin="0,4,0,4"/>
+                            <ListBox x:Name="lstPlatformeModifica"
+                                     SelectionMode="Multiple"
+                                     Height="90"
+                                     Margin="0,0,0,16"
+                                     Background="#0f3460"
+                                     Foreground="#eaeaea"
+                                     BorderBrush="#e94560"
+                                     BorderThickness="1"
+                                     FontFamily="Segoe UI" FontSize="13">
+                                <ListBoxItem Content="PC"/>
+                                <ListBoxItem Content="PlayStation"/>
+                                <ListBoxItem Content="Xbox"/>
+                                <ListBoxItem Content="Nintendo"/>
+                            </ListBox>
+
+                            <Button Content="Actualizeaza Joc"
+                                    Style="{StaticResource BtnPrincipal}"
+                                    HorizontalAlignment="Stretch"
+                                    Click="BtnActualizeazaJoc_Click"/>
+
+                            <Label x:Name="lblRezModJoc" Content=""
+                                   Foreground="#4ecca3" Margin="0,10,0,0"
+                                   HorizontalAlignment="Center"/>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <Border Grid.Column="1" Background="#1a1a2e" Padding="24">
+                    <StackPanel VerticalAlignment="Top">
+                        <Label Content="INSTRUCTIUNI" FontSize="11" FontWeight="Bold"
+                               Foreground="{StaticResource TextSecondary}"
+                               FontFamily="Segoe UI Black" Margin="0,0,0,12"/>
+                        <TextBlock FontFamily="Segoe UI" FontSize="13"
+                                   Foreground="#a8a8b3" TextWrapping="Wrap" LineHeight="22">
+                            1. Selecteaza jocul din lista derulanta.&#x0a;
+                            2. Campurile se completeaza automat cu valorile actuale.&#x0a;
+                            3. Modifica campurile dorite.&#x0a;
+                            4. Apasa Actualizeaza Joc pentru a salva.
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- PANEL MODIFICA USER (cerinta lab 9) -->
+            <!-- ComboBox cu DisplayMemberPath="Nume" pentru selectarea userului -->
+            <Grid x:Name="panelModificaUser" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="340" MinWidth="280"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Background="#16213e"
+                        BorderBrush="#0f3460" BorderThickness="0,0,2,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="20">
+
+                            <Label Content="MODIFICA USER" FontSize="13" FontWeight="Bold"
+                                   Foreground="{StaticResource AccentColor}"
+                                   FontFamily="Segoe UI Black" Margin="0,0,0,16"/>
+
+                            <!-- ComboBox cu DisplayMemberPath (cerinta lab 9) -->
+                            <Label Content="Selecteaza utilizatorul de modificat" Margin="0,0,0,4"/>
+                            <ComboBox x:Name="cmbSelecteazaUser"
+                                      DisplayMemberPath="Nume"
+                                      Margin="0,0,0,16"
+                                      SelectionChanged="CmbSelecteazaUser_SelectionChanged"/>
+
+                            <Label x:Name="lblModNume" Content="Nume nou" Margin="0,0,0,4"/>
+                            <TextBox x:Name="txtModNume" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errModNume"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Numele este obligatoriu (max 30 caractere)!"/>
+
+                            <Label x:Name="lblModSold" Content="Sold nou (RON)" Margin="0,4,0,4"/>
+                            <TextBox x:Name="txtModSold" Margin="0,0,0,2"/>
+                            <TextBlock x:Name="errModSold"
+                                       Style="{StaticResource TextEroare}"
+                                       Text="Soldul trebuie sa fie intre 0 si 100000 RON!"/>
+
+                            <!-- DatePicker pentru data inregistrarii la modificare -->
+                            <Label Content="Data inregistrarii" Margin="0,4,0,4"/>
+                            <DatePicker x:Name="dtpModDataInregistrare"
+                                        SelectedDateFormat="Short"
+                                        Margin="0,0,0,12"
+                                        Background="#0f3460"
+                                        Foreground="#eaeaea"
+                                        BorderBrush="#e94560"
+                                        FontFamily="Segoe UI" FontSize="13"/>
+
+                            <!-- Tip cont RadioButton -->
+                            <Label Content="Tip cont" Margin="0,0,0,4"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                <RadioButton x:Name="rbModStandard" Content="Standard"
+                                             GroupName="TipContMod" IsChecked="True"
+                                             Margin="0,0,14,0"/>
+                                <RadioButton x:Name="rbModPremium" Content="Premium"
+                                             GroupName="TipContMod" Margin="0,0,14,0"/>
+                                <RadioButton x:Name="rbModAdmin"   Content="Admin"
+                                             GroupName="TipContMod"/>
+                            </StackPanel>
+
+                            <Button Content="Actualizeaza User"
+                                    Style="{StaticResource BtnPrincipal}"
+                                    HorizontalAlignment="Stretch"
+                                    Click="BtnActualizeazaUser_Click"/>
+
+                            <!-- CRUD Delete User (cerinta lab 10) -->
+                            <!-- BINDING 2 (cerinta lab 10): Content legat la Nume-ul         -->
+                            <!-- userului selectat in ComboBox — binding intre controale       -->
+                            <Button x:Name="btnStergeUser"
+                                    IsEnabled="False"
+                                    Content="{Binding ElementName=cmbSelecteazaUser,
+                                              Path=SelectedItem.Nume,
+                                              StringFormat='Sterge: {0}',
+                                              FallbackValue='Sterge User (selecteaza mai intai)'}"
+                                    Margin="0,8,0,0"
+                                    HorizontalAlignment="Stretch"
+                                    Background="#8b1a1a"
+                                    Foreground="White"
+                                    BorderThickness="0"
+                                    Padding="16,9"
+                                    Cursor="Hand"
+                                    Click="BtnStergeUser_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border x:Name="bg"
+                                                            Background="{TemplateBinding Background}"
+                                                            CornerRadius="6"
+                                                            Padding="{TemplateBinding Padding}">
+                                                        <ContentPresenter HorizontalAlignment="Center"
+                                                                          VerticalAlignment="Center"/>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsEnabled" Value="False">
+                                                            <Setter TargetName="bg" Property="Opacity" Value="0.4"/>
+                                                        </Trigger>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter TargetName="bg" Property="Background" Value="#c0392b"/>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+
+                            <Label x:Name="lblRezModUser" Content=""
+                                   Foreground="#4ecca3" Margin="0,10,0,0"
+                                   HorizontalAlignment="Center"/>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <Border Grid.Column="1" Background="#1a1a2e" Padding="24">
+                    <StackPanel VerticalAlignment="Top">
+                        <Label Content="INSTRUCTIUNI" FontSize="11" FontWeight="Bold"
+                               Foreground="{StaticResource TextSecondary}"
+                               FontFamily="Segoe UI Black" Margin="0,0,0,12"/>
+                        <TextBlock FontFamily="Segoe UI" FontSize="13"
+                                   Foreground="#a8a8b3" TextWrapping="Wrap" LineHeight="22">
+                            1. Selecteaza utilizatorul din lista derulanta.&#x0a;
+                            2. Campurile se completeaza automat cu valorile actuale.&#x0a;
+                            3. Modifica campurile dorite.&#x0a;
+                            4. Apasa Actualizeaza User pentru a salva.
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+        </Grid>
+    </DockPanel>
+</Window>

@@ -3,27 +3,70 @@
   "WorkspaceRootPath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{126BE3CA-D6BF-4D77-A2D4-9218807F922D}|LibraryGameAndUsers\\LibraryGameAndUsers.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\librarygameandusers\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{126BE3CA-D6BF-4D77-A2D4-9218807F922D}|LibraryGameAndUsers\\LibraryGameAndUsers.csproj|solutionrelative:librarygameandusers\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\nivelstoredata\\stocarefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|solutionrelative:nivelstoredata\\stocarefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{450DEEB5-3F2B-48D9-BA47-2304056CDD86}|Proiect\\GameMarketPlace.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\proiect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{450DEEB5-3F2B-48D9-BA47-2304056CDD86}|Proiect\\GameMarketPlace.csproj|solutionrelative:proiect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\nivelstoredata\\istocaredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|solutionrelative:nivelstoredata\\istocaredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Git\\ReleaseNotes.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\nivelstoredata\\administraremarketplacememorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|solutionrelative:nivelstoredata\\administraremarketplacememorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\nivelstoredata\\nivelstoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|solutionrelative:nivelstoredata\\nivelstoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\nivelstoredata\\administraremarketplacefisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|solutionrelative:nivelstoredata\\administraremarketplacefisiertext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\nivelstoredata\\administraremarketplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|solutionrelative:nivelstoredata\\administraremarketplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{126BE3CA-D6BF-4D77-A2D4-9218807F922D}|LibraryGameAndUsers\\LibraryGameAndUsers.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\librarygameandusers\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{126BE3CA-D6BF-4D77-A2D4-9218807F922D}|LibraryGameAndUsers\\LibraryGameAndUsers.csproj|solutionrelative:librarygameandusers\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{126BE3CA-D6BF-4D77-A2D4-9218807F922D}|LibraryGameAndUsers\\LibraryGameAndUsers.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\librarygameandusers\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{126BE3CA-D6BF-4D77-A2D4-9218807F922D}|LibraryGameAndUsers\\LibraryGameAndUsers.csproj|solutionrelative:librarygameandusers\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\gamemarketplacewpfeue\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|solutionrelative:gamemarketplacewpfeue\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\gamemarketplacewpfeue\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|solutionrelative:gamemarketplacewpfeue\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\gamemarketplacewpfeue\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|solutionrelative:gamemarketplacewpfeue\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{450DEEB5-3F2B-48D9-BA47-2304056CDD86}|Proiect\\GameMarketPlace.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\proiect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{450DEEB5-3F2B-48D9-BA47-2304056CDD86}|Proiect\\GameMarketPlace.csproj|solutionrelative:proiect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\gamemarketplacewpfeue\\marketplaceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DB21FC-8FC0-A88C-2570-346D0ABF5854}|GameMarketplaceWPFeue\\GameMarketplaceWPF.csproj|solutionrelative:gamemarketplacewpfeue\\marketplaceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\nivelstoredata\\nivelstoredata.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{24F87E8C-F443-4627-8EAA-D5A0686D822D}|NivelStoreData\\NivelStoreData.csproj|solutionrelative:nivelstoredata\\nivelstoredata.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Avgustus\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPF\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameMarketplaceWPF\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{450DEEB5-3F2B-48D9-BA47-2304056CDD86}|Proiect\\GameMarketPlace.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\proiect\\games.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{450DEEB5-3F2B-48D9-BA47-2304056CDD86}|Proiect\\GameMarketPlace.csproj|solutionrelative:proiect\\games.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Git\\ReleaseNotes.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{450DEEB5-3F2B-48D9-BA47-2304056CDD86}|Proiect\\GameMarketPlace.csproj|d:\\repozitoriugit\\proiect piu\\proiect\\proiect\\gamemarketplace.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -37,21 +80,170 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReleaseNotes.html",
-              "DocumentMoniker": "C:\\Program Files\\Git\\ReleaseNotes.html",
-              "ToolTip": "C:\\Program Files\\Git\\ReleaseNotes.html",
-              "ViewState": "AgIAAMYPAAAAAAAAAAAAAMYPAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-22T10:35:47.535Z"
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GameMarketplaceWPFeue\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\MainWindow.xaml.cs",
+              "RelativeToolTip": "GameMarketplaceWPFeue\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAHYCAAAAAAAAAAAQwJoCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T04:56:51.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "GameMarketplaceWPFeue\\AssemblyInfo.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\AssemblyInfo.cs",
+              "RelativeToolTip": "GameMarketplaceWPFeue\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T07:03:18.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GameMarketplaceWPFeue\\MainWindow.xaml",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\MainWindow.xaml",
+              "RelativeToolTip": "GameMarketplaceWPFeue\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-21T04:56:38.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\Game.cs",
+              "RelativeDocumentMoniker": "LibraryGameAndUsers\\Game.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\Game.cs",
+              "RelativeToolTip": "LibraryGameAndUsers\\Game.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:33:40.509Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\User.cs",
+              "RelativeDocumentMoniker": "LibraryGameAndUsers\\User.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\User.cs",
+              "RelativeToolTip": "LibraryGameAndUsers\\User.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAqwHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:35:37.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdministrareMarketplace.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\AdministrareMarketplace.cs",
+              "RelativeDocumentMoniker": "NivelStoreData\\AdministrareMarketplace.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\AdministrareMarketplace.cs",
+              "RelativeToolTip": "NivelStoreData\\AdministrareMarketplace.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwHkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T06:47:38.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdministrareMarketplaceFisierText.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\AdministrareMarketplaceFisierText.cs",
+              "RelativeDocumentMoniker": "NivelStoreData\\AdministrareMarketplaceFisierText.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\AdministrareMarketplaceFisierText.cs",
+              "RelativeToolTip": "NivelStoreData\\AdministrareMarketplaceFisierText.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwIkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T04:37:03.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdministrareMarketplaceMemorie.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\AdministrareMarketplaceMemorie.cs",
+              "RelativeDocumentMoniker": "NivelStoreData\\AdministrareMarketplaceMemorie.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\AdministrareMarketplaceMemorie.cs",
+              "RelativeToolTip": "NivelStoreData\\AdministrareMarketplaceMemorie.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAiwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T04:38:00.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IStocareData.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\IStocareData.cs",
+              "RelativeDocumentMoniker": "NivelStoreData\\IStocareData.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\IStocareData.cs",
+              "RelativeToolTip": "NivelStoreData\\IStocareData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T04:38:07.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StocareFactory.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\StocareFactory.cs",
+              "RelativeDocumentMoniker": "NivelStoreData\\StocareFactory.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\StocareFactory.cs",
+              "RelativeToolTip": "NivelStoreData\\StocareFactory.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T04:38:36.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\Program.cs",
+              "RelativeDocumentMoniker": "Proiect\\Program.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\Program.cs",
+              "RelativeToolTip": "Proiect\\Program.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAA6wGQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:19:36.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MarketplaceViewModel.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\MarketplaceViewModel.cs",
+              "RelativeDocumentMoniker": "GameMarketplaceWPFeue\\MarketplaceViewModel.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPFeue\\MarketplaceViewModel.cs",
+              "RelativeToolTip": "GameMarketplaceWPFeue\\MarketplaceViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T10:14:09.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "NivelStoreData.csproj",
               "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj",
               "RelativeDocumentMoniker": "NivelStoreData\\NivelStoreData.csproj",
@@ -63,7 +255,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
+              "Title": "XamlReader.cs",
+              "DocumentMoniker": "C:\\Users\\Avgustus\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\Avgustus\\AppData\\Local\\Temp\\.vsdbgsrc\\aad6be2495d0a786b94b3514a5b6903407fe2d6a75ad7e505df6a9d895927867\\XamlReader.cs [Read Only]",
+              "ViewState": "AgIAAKIBAAAAAAAAAAAiwLUBAAACAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T07:12:02.304Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GameMarketplaceWPF\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\GameMarketplaceWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "GameMarketplaceWPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T04:49:30.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Games.txt",
+              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\Games.txt",
+              "RelativeDocumentMoniker": "Proiect\\Games.txt",
+              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\Games.txt",
+              "RelativeToolTip": "Proiect\\Games.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-21T04:37:09.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ReleaseNotes.html",
+              "DocumentMoniker": "C:\\Program Files\\Git\\ReleaseNotes.html",
+              "ToolTip": "C:\\Program Files\\Git\\ReleaseNotes.html",
+              "ViewState": "AgIAAMMPAAAAAAAAAIBJwMYPAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-22T10:35:47.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "GameMarketPlace.csproj",
               "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\GameMarketPlace.csproj",
               "RelativeDocumentMoniker": "Proiect\\GameMarketPlace.csproj",
@@ -72,59 +309,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-03-15T12:42:44.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NivelStoreData.cs",
-              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.cs",
-              "RelativeDocumentMoniker": "NivelStoreData\\NivelStoreData.cs",
-              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.cs",
-              "RelativeToolTip": "NivelStoreData\\NivelStoreData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T12:39:05.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\User.cs",
-              "RelativeDocumentMoniker": "LibraryGameAndUsers\\User.cs",
-              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\User.cs",
-              "RelativeToolTip": "LibraryGameAndUsers\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T12:35:37.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Game.cs",
-              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\Game.cs",
-              "RelativeDocumentMoniker": "LibraryGameAndUsers\\Game.cs",
-              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\LibraryGameAndUsers\\Game.cs",
-              "RelativeToolTip": "LibraryGameAndUsers\\Game.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwAwAAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T12:33:40.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\Program.cs",
-              "RelativeDocumentMoniker": "Proiect\\Program.cs",
-              "ToolTip": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\Proiect\\Program.cs",
-              "RelativeToolTip": "Proiect\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T12:19:36.083Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

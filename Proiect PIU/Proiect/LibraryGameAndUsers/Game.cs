@@ -1,6 +1,5 @@
 ﻿namespace LibraryGameAndUsers
 {
-    //Aici deja enum simplu pentru tipul jocului enumerate mai in jos
     public enum GenJoc
     {
         RPG,
@@ -10,7 +9,7 @@
         Aventura,
         Simulare
     }
-    //Deja un enum mai complex cu FLAGS unde un joc poate fi disponibil pe mai multe platforme,functioneaza in baza codului binar
+
     [Flags]
     public enum PlatformaJoc
     {
@@ -23,6 +22,14 @@
 
     public class Game
     {
+        private const char SEPARATOR = '|';
+        private const int IDX_ID = 0;
+        private const int IDX_TITLU = 1;
+        private const int IDX_GEN = 2;
+        private const int IDX_DESCRIERE = 3;
+        private const int IDX_PRET = 4;
+        private const int IDX_PLATFORME = 5;
+
         public int IdGame { get; set; }
         public string Titlu { get; set; }
         public string Descriere { get; set; }
@@ -45,6 +52,30 @@
             Descriere = descriere;
             Pret = pret;
             Platforme = platforme;
+        }
+
+        public Game(string linieFisier)
+        {
+            string[] camp = linieFisier.Split(SEPARATOR);
+            IdGame = Convert.ToInt32(camp[IDX_ID]);
+            Titlu = camp[IDX_TITLU];
+            Enum.TryParse(camp[IDX_GEN], out GenJoc gen);
+            Gen = gen;
+            Descriere = camp[IDX_DESCRIERE];
+            Pret = Convert.ToDouble(camp[IDX_PRET]);
+            Platforme = (PlatformaJoc)Convert.ToInt32(camp[IDX_PLATFORME]);
+        }
+
+        public string ConversieLaSirPentruFisier()
+        {
+            return string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}",
+                SEPARATOR,
+                IdGame,
+                Titlu ?? string.Empty,
+                Gen.ToString(),
+                Descriere ?? string.Empty,
+                Pret.ToString(),
+                (int)Platforme);
         }
 
         public string Info()

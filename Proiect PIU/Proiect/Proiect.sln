@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37012.4 d17.14
+VisualStudioVersion = 17.14.37012.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMarketPlace", "Proiect\GameMarketPlace.csproj", "{450DEEB5-3F2B-48D9-BA47-2304056CDD86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryGameAndUsers", "LibraryGameAndUsers\LibraryGameAndUsers.csproj", "{126BE3CA-D6BF-4D77-A2D4-9218807F922D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NivelStoreData", "NivelStoreData\NivelStoreData.csproj", "{24F87E8C-F443-4627-8EAA-D5A0686D822D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMarketplaceWPF", "GameMarketplaceWPFeue\GameMarketplaceWPF.csproj", "{14DB21FC-8FC0-A88C-2570-346D0ABF5854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{24F87E8C-F443-4627-8EAA-D5A0686D822D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24F87E8C-F443-4627-8EAA-D5A0686D822D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24F87E8C-F443-4627-8EAA-D5A0686D822D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14DB21FC-8FC0-A88C-2570-346D0ABF5854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14DB21FC-8FC0-A88C-2570-346D0ABF5854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14DB21FC-8FC0-A88C-2570-346D0ABF5854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14DB21FC-8FC0-A88C-2570-346D0ABF5854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

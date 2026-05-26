@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6F8tpMlDBgg=",
+  "dgSpecHash": "iaZWS2/J1U0=",
   "success": true,
   "projectFilePath": "D:\\RepozitoriuGIT\\Proiect PIU\\Proiect\\NivelStoreData\\NivelStoreData.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Avgustus\\.nuget\\packages\\system.configuration.configurationmanager\\10.0.8\\system.configuration.configurationmanager.10.0.8.nupkg.sha512",
+    "C:\\Users\\Avgustus\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512",
+    "C:\\Users\\Avgustus\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.8\\system.security.cryptography.protecteddata.10.0.8.nupkg.sha512"
+  ],
   "logs": []
 }

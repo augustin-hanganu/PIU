@@ -9,3 +9,15 @@ D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.
 D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\refint\LibraryGameAndUsers.dll
 D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.pdb
 D:\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\ref\LibraryGameAndUsers.dll
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\bin\Debug\net7.0\LibraryGameAndUsers.deps.json
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\bin\Debug\net7.0\LibraryGameAndUsers.dll
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\bin\Debug\net7.0\LibraryGameAndUsers.pdb
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.AssemblyInfoInputs.cache
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.AssemblyInfo.cs
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.csproj.CoreCompileInputs.cache
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.sourcelink.json
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.dll
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\refint\LibraryGameAndUsers.dll
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\LibraryGameAndUsers.pdb
+D:\RepozitoriuGIT\Proiect PIU\Proiect\LibraryGameAndUsers\obj\Debug\net7.0\ref\LibraryGameAndUsers.dll

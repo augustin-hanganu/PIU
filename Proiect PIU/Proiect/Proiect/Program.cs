@@ -3,16 +3,11 @@ using NivelStoreData;
 
 class Program
 {
-    static List<Game> games = new List<Game>();
-    static List<User> users = new List<User>();
-
-    static List<Game> GetGames() => games;
-    static List<User> GetUsers() => users;
+    static IStocareData stocare = StocareFactory.GetAdministratorStocare();
+    static AdministrareMarketplace administrare = new AdministrareMarketplace();
 
     static void Main()
     {
-        AdministrareMarketplace administrare = new AdministrareMarketplace();
-
         string optiune;
         do
         {
@@ -24,6 +19,8 @@ class Program
             Console.WriteLine("E. Inregistreaza utilizator");
             Console.WriteLine("F. Afiseaza utilizatori");
             Console.WriteLine("G. Cumpara joc");
+            Console.WriteLine("H. Modifica joc");
+            Console.WriteLine("I. Modifica utilizator");
             Console.WriteLine("X. Iesire");
             Console.Write("Optiune: ");
             optiune = Console.ReadLine()?.ToUpper() ?? string.Empty;
@@ -32,28 +29,30 @@ class Program
             {
                 case "A":
                     Game gameNou = AdministrareMarketplace.CitireGameTastatura();
-                    administrare.AdaugaGame(gameNou, games);
+                    stocare.AddGame(gameNou);
+                    Console.WriteLine("Joc adaugat cu succes!");
                     break;
 
                 case "B":
-                    AfisareToateGameurile(GetGames());
+                    AfisareToateGameurile(stocare.GetGames());
                     break;
 
                 case "C":
-                    CautareGameDupaTitlu(GetGames());
+                    CautareGameDupaTitlu(stocare.GetGames());
                     break;
 
                 case "D":
-                    CautareGameDupaGen(GetGames());
+                    CautareGameDupaGen(stocare.GetGames());
                     break;
 
                 case "E":
                     User userNou = AdministrareMarketplace.CitireUserTastatura();
-                    administrare.AdaugaUser(userNou, users);
+                    stocare.AddUser(userNou);
+                    Console.WriteLine("Utilizator inregistrat!");
                     break;
 
                 case "F":
-                    AfisareUtilizatori(GetUsers());
+                    AfisareUtilizatori(stocare.GetUsers());
                     break;
 
                 case "G":
@@ -61,7 +60,15 @@ class Program
                     int.TryParse(Console.ReadLine(), out int idUser);
                     Console.Write("ID joc: ");
                     int.TryParse(Console.ReadLine(), out int idGame);
-                    administrare.CumparaJoc(idUser, idGame, users, games);
+                    administrare.CumparaJoc(idUser, idGame, stocare);
+                    break;
+
+                case "H":
+                    administrare.ModificaGame(stocare);
+                    break;
+
+                case "I":
+                    administrare.ModificaUser(stocare);
                     break;
 
                 case "X":
@@ -75,70 +82,39 @@ class Program
         } while (optiune != "X");
     }
 
-    // ===== Afisare =====
-
-    static void AfisareGame(Game game)
-    {
-        if (game == null)
-            Console.WriteLine("Jocul nu exista!");
-        else
-            Console.WriteLine(game.Info());
-    }
-
     static void AfisareToateGameurile(List<Game> games)
     {
-        if (games.Count == 0)
-        {
-            Console.WriteLine("Nu exista jocuri in marketplace!");
-            return;
-        }
+        if (games.Count == 0) { Console.WriteLine("Nu exista jocuri!"); return; }
         Console.WriteLine("=== Jocuri disponibile ===");
         foreach (Game g in games)
-            AfisareGame(g);
+            Console.WriteLine(g.Info());
     }
 
     static void AfisareUtilizatori(List<User> users)
     {
-        if (users.Count == 0)
-        {
-            Console.WriteLine("Nu exista utilizatori!");
-            return;
-        }
+        if (users.Count == 0) { Console.WriteLine("Nu exista utilizatori!"); return; }
         Console.WriteLine("=== Utilizatori inregistrati ===");
         foreach (User u in users)
             Console.WriteLine(u.Info());
     }
 
-    // ===== Cautare =====
-
     static void CautareGameDupaTitlu(List<Game> games)
     {
         Console.Write("Titlu cautat: ");
         string titlu = Console.ReadLine() ?? string.Empty;
-
-        // LINQ - filtrare dupa titlu
-        List<Game> rezultat = games.Where(g => g.Titlu.ToLower()
-                                                .Contains(titlu.ToLower()))
-                                   .ToList();
-        if (rezultat.Count == 0)
-            Console.WriteLine("Niciun joc gasit!");
-        else
-            foreach (Game g in rezultat)
-                AfisareGame(g);
+        List<Game> rezultat = games
+            .Where(g => g.Titlu.ToLower().Contains(titlu.ToLower()))
+            .ToList();
+        if (rezultat.Count == 0) Console.WriteLine("Niciun joc gasit!");
+        else foreach (Game g in rezultat) Console.WriteLine(g.Info());
     }
 
     static void CautareGameDupaGen(List<Game> games)
     {
         Console.WriteLine("Gen cautat (0=RPG, 1=FPS, 2=Sport, 3=Strategie, 4=Aventura, 5=Simulare): ");
         Enum.TryParse(Console.ReadLine(), out GenJoc gen);
-
-        // LINQ - filtrare dupa gen
         List<Game> rezultat = games.Where(g => g.Gen == gen).ToList();
-
-        if (rezultat.Count == 0)
-            Console.WriteLine("Niciun joc gasit!");
-        else
-            foreach (Game g in rezultat)
-                AfisareGame(g);
+        if (rezultat.Count == 0) Console.WriteLine("Niciun joc gasit!");
+        else foreach (Game g in rezultat) Console.WriteLine(g.Info());
     }
 }
